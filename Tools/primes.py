@@ -2,7 +2,14 @@
 
 
 def is_prime(number):
-    pass
+    flag = True
+    for j in range(2, number):
+        if number % j == 0:
+            flag = False
+
+    if flag:
+        return True
+    return False
 
 
 def primes_until(number):
