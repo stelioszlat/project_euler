@@ -1,6 +1,5 @@
 # Tools for prime numbers
 
-
 def is_prime(number):
     flag = True
     for j in range(2, number):
@@ -29,7 +28,9 @@ def primes_until(number):
         if flag:
             primes.append(i)
 
-    print(primes)
+        print(str(i*100/number) + "%")
+
+    return primes
 
 
 def prime_factors(number):
