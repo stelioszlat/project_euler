@@ -1,4 +1,6 @@
 # Tools for prime numbers
+import math
+from math import floor, root
 
 def is_prime(number):
     flag = True
@@ -16,19 +18,14 @@ def primes_until(number):
     list = []
     primes = []
 
-    for i in range(2, number):
+    for i in range(2, floor(root(number))):
         list.append(i)
 
     for i in list:
-        flag = True
-        for j in range(2, i):
-            if i % j == 0:
-                flag = False
-
-        if flag:
+        if is_prime(i):
             primes.append(i)
 
-        print(str(i*100/number) + "%")
+        # print(str(i*100/number) + "%") # percentage status
 
     return primes
 

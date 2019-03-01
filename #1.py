@@ -27,3 +27,5 @@ for i in list3:
     s += i
 
 print(s)
+
+# 233168

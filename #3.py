@@ -33,3 +33,5 @@ for i in factors:
 # print(prime_factors)
 
 print(prime_factors[-1])
+
+# 6857
