@@ -1,6 +1,6 @@
 # Tools for prime numbers
 import math
-from math import floor, root
+from math import floor, sqrt
 
 def is_prime(number):
     flag = True
@@ -18,7 +18,7 @@ def primes_until(number):
     list = []
     primes = []
 
-    for i in range(2, floor(root(number))):
+    for i in range(2, number):
         list.append(i)
 
     for i in list:
@@ -35,4 +35,4 @@ def prime_factors(number):
 
 
 if __name__ == '__main__':
-    primes_until(20)
+    print(primes_until(20))
