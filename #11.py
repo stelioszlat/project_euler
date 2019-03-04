@@ -1,5 +1,3 @@
-import _thread
-
 
 def find_product(nums, group_by):
     """
@@ -132,7 +130,4 @@ print_2d_list(results)
 # print(results_col)
 # print(results_diag)
 # print(results_diag2)
-print(results_diag_minor)
-
-
-
+# print(results_diag_minor)
