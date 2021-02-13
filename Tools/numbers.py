@@ -20,14 +20,9 @@ def triangular_of(n):
 
 
 def is_perfect(n, check=False):
-    divs = []
     sum = 0
 
-    for i in range(1, n):
-        if n % i == 0:
-            divs.append(i)
-
-    for d in divs:
+    for d in proper_divisors(n):
         sum += d
 
     if check:
@@ -63,7 +58,13 @@ def divisors(n):
         if is_divisor(i, n):
             yield i
 
+def proper_divisors(n):
+    for i in range(1, floor(n/2)+1):
+        if is_divisor(i, n):
+            yield i
+
 if __name__ == '__main__':
-    for i in range(1, floor(28)+1):
-        if(is_divisor(i, 28)):
-            print(str(i))
+    print(is_abundant(28))
+    print(is_perfect(28))
+    print(is_deficient(28))
+    
