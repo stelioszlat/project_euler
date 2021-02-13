@@ -14,6 +14,7 @@ triangle = [[75],
 [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
 [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]]
 
+# print table
 for i in range(len(triangle)):
     for j in range(len(triangle[i])):
         print(triangle[i][j])

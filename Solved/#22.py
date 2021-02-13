@@ -5,7 +5,7 @@ letter_score = {'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5,
                 'P': 16, 'Q': 17, 'R': 18, 'S': 19, 'T': 20,
                 'U': 21, 'V': 22, 'W': 23, 'X': 24, 'Y': 25, 'Z': 26}
 
-with open("p022_names.txt") as f:
+with open("../p022_names.txt") as f:
 
     names = f.readline()
 

@@ -1,10 +1,8 @@
-from Tools.progress import Main
 
-sequences = {}
+max = 0
 
-# m = Main()
 for n in range(13, 1000001):
-    s = []
+    count = 0
     i = n
     while True:
 
@@ -13,26 +11,14 @@ for n in range(13, 1000001):
         else:
             i = 3*i + 1
 
-        s.append(i)
+        count += 1
 
         if i == 1:
+            count += 1
             break
 
-    # print(s)
+    if count > max:
+        max = n
 
-    # m.progress(round(n/1000001))
-    sequences[n] = s
 
-print(sequences)
-
-s = sequences.values()
-lens = []
-
-for i in s:
-    lens.append(len(i))
-
-mx = max(lens)
-mx_index = lens.index(mx) + 13
-
-print(mx)
-print(mx_index)
+print(max)

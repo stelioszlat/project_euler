@@ -1,17 +1,19 @@
 
 from Tools.factors import *
-from Tools.triang_numbers import get_triang_number
+from Tools.numbers import triangular_of, divisors
 
-num = 29 # don't have to check for 28 or less
-while True:
-    trian = get_triang_number(num)
-    f = factors(trian)
+n = 1000                    #  divs > floor(triang / 2) => (floor(triang / 2) < triang) 2 * divs > triang
+flag = True
+last = triangular_of(999)           # triang(x) = triang(x - 1) + x
 
-    print(trian)
-    print(len(f))
-    print(f)
-    if len(f) > 100 :
-        break
-    num += 1
+while flag:
 
-print(trian)
+    triang = last + n
+    count = 0
+    for i in divisors(triang):
+        if count >= 500:
+            print(triang)
+            flag = False
+            break
+        count += 1
+    n += 1
