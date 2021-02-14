@@ -54,6 +54,11 @@ def is_abundant(n):
     return False
 
 
+def are_amicable(a, b):
+    if a != b:
+        return sum_divisors(a) == b and sum_divisors(b) == a
+
+
 def is_divisor(a, b):
     return b % a == 0
 
@@ -62,6 +67,10 @@ def divisors(n):
     for i in range(1, floor(n)+1):
         if is_divisor(i, n):
             yield i
+
+
+def sum_divisors(n):
+    return sum(divisors(n))
 
 if __name__ == '__main__':
     for i in range(1, floor(28)+1):
