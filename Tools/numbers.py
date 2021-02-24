@@ -4,6 +4,10 @@ def is_palindrome(number):
     pass
 
 
+def number_to_list(number):
+    return [int(x) for x in str(number)]    
+
+
 def is_even(x):
     return True if x % 2 == 0 else False
 
@@ -20,9 +24,14 @@ def triangular_of(n):
 
 
 def is_perfect(n, check=False):
+    divs = []
     sum = 0
 
-    for d in proper_divisors(n):
+    for i in range(1, n):
+        if n % i == 0:
+            divs.append(i)
+
+    for d in divs:
         sum += d
 
     if check:
@@ -63,19 +72,9 @@ def divisors(n):
         if is_divisor(i, n):
             yield i
 
-<<<<<<< HEAD
 
 def sum_divisors(n):
     return sum(divisors(n))
-=======
-def proper_divisors(n):
-    for i in range(1, floor(n/2)+1):
-        if is_divisor(i, n):
-            yield i
->>>>>>> 8e0cc81a0a437d750b4205bfdefbdafd81019fd1
 
 if __name__ == '__main__':
-    print(is_abundant(28))
-    print(is_perfect(28))
-    print(is_deficient(28))
-    
+    print(number_to_list(1634))
