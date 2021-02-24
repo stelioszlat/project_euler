@@ -1,4 +1,5 @@
-triangle = [[75],
+triangle = [
+[75],
 [95, 64],
 [17, 47, 82],
 [18, 35, 87, 10],
@@ -14,7 +15,33 @@ triangle = [[75],
 [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
 [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]]
 
+test = [
+    [3],
+    [7, 4],
+    [2, 4, 6],
+    [8, 5, 9, 3]
+]
+
+layers = []
+
 # print table
-for i in range(len(triangle)):
-    for j in range(len(triangle[i])):
-        print(triangle[i][j])
+# for i in range(len(triangle)):
+#     for j in range(len(triangle[i])):
+#         print(triangle[i][j])
+last = test[0]
+path = 0
+
+for i in range(0, 3):
+    layer = []
+    for j in range(len(last)):
+        layer.append(last[j] + test[i+1][j])
+        layer.append(last[j] + test[i+1][j+1])
+
+    last = layer
+    path += max(layer)
+    layers.append(layer)
+
+
+print(layers)
+
+
