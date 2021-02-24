@@ -1,7 +1,7 @@
 # Tools for prime numbers
 import math
 from math import floor, sqrt, pow
-from Tools.numbers import is_even, is_odd
+from numbers import is_even, is_odd
 
 
 def is_prime(number):
@@ -51,7 +51,7 @@ def pyth_triples(n, m, k=1):
 
     if are_co_prime(n, m):
         if m > n:
-            # if (is_even(m) and is_odd(n)) or (is_odd(m) and is_even(n)):
+            if not(is_odd(n) and is_odd(n)):
                 a = k * (pow(m, 2) - pow(n, 2))
                 b = k * (2 * m * n)
                 c = k * (pow(m, 2) + pow(n, 2))
@@ -70,7 +70,7 @@ def pyth_triples(n, m, k=1):
 
 if __name__ == '__main__':
 
-    pass
+    print(pyth_triples(3, 6))
 
 # even and odd = True
 # even and even = False

@@ -1,8 +1,8 @@
 
 max = 0
 
-for n in range(13, 1000001):
-    count = 0
+for n in range(13, 1000000):
+    s = []
     i = n
     while True:
 
@@ -11,14 +11,15 @@ for n in range(13, 1000001):
         else:
             i = 3*i + 1
 
-        count += 1
+        s.append(i)
 
         if i == 1:
-            count += 1
             break
 
-    if count > max:
+    
+    if len(s) > max:
         max = n
+    
 
 
 print(max)

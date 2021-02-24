@@ -1,5 +1,5 @@
 
-from Tools.factors import *
+# from Tools.factors import *
 from Tools.numbers import triangular_of, divisors
 
 n = 1000                    #  divs > floor(triang / 2) => (floor(triang / 2) < triang) 2 * divs > triang
