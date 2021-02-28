@@ -1,12 +1,8 @@
 # Tools for prime numbers
 import math
 from math import floor, sqrt, pow
-from numbers import is_even, is_odd
-
-
-def is_prime(number):
-    pass
-
+from .numbers import is_odd, is_even
+from sympy import isprime
 
 
 def primes_until(number):
@@ -25,11 +21,6 @@ def primes_until(number):
             break
 
     return nums
-
-
-
-def prime_factors(number):
-    pass
 
 
 def are_co_prime(p, q):

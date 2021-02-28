@@ -1,20 +1,11 @@
 import math
 from math import sqrt
 
-from Tools.primes import pyth_triples
+def pyth_triples():
+    for i in range(2, 1000):
+        for j in range(2, 1000):
+            if i + j + sqrt(i**2+j**2) == 1000:
+                print(int(i * j * sqrt(i**2 + j**2)))
+                return
 
-
-
-
-for i in range(2, 1001):
-    for j in range(2, 1001):
-        
-        t = pyth_triples(i, j)
-        print(t)
-        if t and t[1] + t[2] + t[3] == 1000:
-            print(t)
-
-
-
-
-
+pyth_triples()
