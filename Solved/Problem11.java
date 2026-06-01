@@ -1,3 +1,5 @@
+package Solved;
+
 import java.util.ArrayList;
 
 public class Problem11 {
@@ -62,6 +64,7 @@ public class Problem11 {
         maxProducts.add(maxDi2);
 
         System.out.println(Math.max(Math.max(maxRow, maxCol), Math.max(maxDi, maxDi2)));
+        // answer: 70600674
     }
 
 }

@@ -1,4 +1,6 @@
-public class Main {
+
+package Solved;
+public class Problem15 {
 
     public static void main(String[] args) {
         long[][] grid = new long[21][21];
